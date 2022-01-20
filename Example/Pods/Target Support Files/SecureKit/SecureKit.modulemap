@@ -1,0 +1,6 @@
+framework module SecureKit {
+  umbrella header "SecureKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
