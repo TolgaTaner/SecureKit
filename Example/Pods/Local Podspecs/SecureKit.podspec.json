@@ -1,8 +1,8 @@
 {
   "name": "SecureKit",
   "version": "0.1.0",
-  "summary": "A short description of SecureKit.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A kit that secure the user sensitive data.",
+  "description": "It secures the user sensitive data using AES encryption such as one time password code, password.",
   "homepage": "https://github.com/TolgaTaner/SecureKit",
   "license": {
     "type": "MIT",
@@ -15,8 +15,19 @@
     "git": "https://github.com/TolgaTaner/SecureKit.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/TolgaTanerdev",
   "platforms": {
-    "ios": "9.0"
+    "ios": "12.0"
   },
-  "source_files": "SecureKit/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "SecureKit/Classes/**/*",
+  "dependencies": {
+    "CryptoSwift": [
+
+    ],
+    "KeychainSwift": [
+
+    ]
+  },
+  "swift_version": "5.0"
 }

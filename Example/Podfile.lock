@@ -1,27 +1,27 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - SecureKit (0.1.0)
+  - CryptoSwift (1.4.2)
+  - KeychainSwift (20.0.0)
+  - SecureKit (0.1.0):
+    - CryptoSwift
+    - KeychainSwift
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 2.1.4)
   - SecureKit (from `../`)
 
 SPEC REPOS:
   trunk:
-    - FBSnapshotTestCase
+    - CryptoSwift
+    - KeychainSwift
 
 EXTERNAL SOURCES:
   SecureKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  SecureKit: 00321a1d3006ba3f4710ddf411c945543797082a
+  CryptoSwift: a532e74ed010f8c95f611d00b8bbae42e9fe7c17
+  KeychainSwift: 0ce6a4d13f7228054d1a71bb1b500448fb2ab837
+  SecureKit: 7f1aa5bef434030ced4d3d69fb253a6fde612545
 
-PODFILE CHECKSUM: 97e79bfc734b776dc665f10d475531bc7fec57bc
+PODFILE CHECKSUM: ffdfae952f39906e12b9f19a110ceb93a93d1e4c
 
 COCOAPODS: 1.10.0
