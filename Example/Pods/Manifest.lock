@@ -1,7 +1,7 @@
 PODS:
   - CryptoSwift (1.4.2)
   - KeychainSwift (20.0.0)
-  - SecureKit (0.1.0):
+  - SecureKit (0.1.1):
     - CryptoSwift
     - KeychainSwift
 
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CryptoSwift: a532e74ed010f8c95f611d00b8bbae42e9fe7c17
   KeychainSwift: 0ce6a4d13f7228054d1a71bb1b500448fb2ab837
-  SecureKit: 7f1aa5bef434030ced4d3d69fb253a6fde612545
+  SecureKit: e59f4660e0aa79fa984b0883708b2c71d32aebe9
 
 PODFILE CHECKSUM: ffdfae952f39906e12b9f19a110ceb93a93d1e4c
 

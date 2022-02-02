@@ -1,6 +1,6 @@
 {
   "name": "SecureKit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A kit that secure the user sensitive data.",
   "description": "It secures the user sensitive data using AES encryption such as one time password code, password.",
   "homepage": "https://github.com/TolgaTaner/SecureKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/TolgaTaner/SecureKit.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "social_media_url": "https://twitter.com/TolgaTanerdev",
   "platforms": {
@@ -21,6 +21,7 @@
   },
   "swift_versions": "5.0",
   "source_files": "SecureKit/Classes/**/*",
+  "frameworks": "XCTest",
   "dependencies": {
     "CryptoSwift": [
 
