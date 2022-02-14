@@ -20,7 +20,7 @@ Swift 5.0
 - Securing the whole process from the OTP Code which is given from SMS Provider to the web service given `otp code`, `iv`, `key` parameter with `OTPManager`.
 
 ### Password
-- Securing the whole process from user input to sending backend using a view named ###SecurePasswordView with `PasswordManager` given `password`, `iv`, `key`.
+- Securing the whole process from user input to sending backend using a view named SecurePasswordView with `PasswordManager` given `password`, `iv`, `key`.
 
 ## Installation
 
