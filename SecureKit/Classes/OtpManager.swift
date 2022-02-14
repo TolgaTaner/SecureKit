@@ -43,7 +43,7 @@ public class OtpManager: SecureManager {
     }
     
     //MARK: - CryptionSettings
-    required convenience public init(code: String, iv: String, key: String) throws {
+    required convenience public init(storedValue: String, iv: String, key: String) throws {
         guard key.count == kCCKeySizeAES128 || key.count == kCCKeySizeAES256,
               let _ = key.data(using: .utf8) else {
                   debugPrint("SecureKit: Key should be 13 or 26 characters.")
@@ -53,10 +53,10 @@ public class OtpManager: SecureManager {
             debugPrint("SecureKit: IV should be 13 characters.")
             throw Error.lengthNotSupported
         }
-        if code.count != 6 {
+        if storedValue.count != 6 {
             debugPrint("SecureKit: Code should be 6 characters.")
         }
-        self.init(code: code)
+        self.init(code: storedValue)
         self.iv = iv
         self.key = key
     }

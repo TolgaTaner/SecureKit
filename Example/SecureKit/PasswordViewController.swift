@@ -11,8 +11,13 @@ import SecureKit
 
 class PasswordViewController: UIViewController {
     
+    @IBOutlet weak var passwordTextField: SecurePasswordView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let key = "2tC2H19lkVbQDfakxcrtNMQdd0FloLyw"
+        let iv = "bbC2H19lkVbQDfak"
+        try! passwordTextField.setup(iv: iv, key: key)
     }
 
 

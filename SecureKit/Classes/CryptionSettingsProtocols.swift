@@ -18,5 +18,5 @@ public protocol CryptionParameter {
 }
 
 public protocol CryptionSettings {
-    init(code: String, iv: String, key: String) throws
+    init(storedValue: String, iv: String, key: String) throws
 }

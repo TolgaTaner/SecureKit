@@ -16,12 +16,11 @@ Swift 5.0
 
 ## Features
 
-- Securing the whole process from OTP Code from SMS Provider to the web service given `otp code`, `iv`, `key` parameter with `OTPManager`.
+### One Time Password
+- Securing the whole process from the OTP Code which is given from SMS Provider to the web service given `otp code`, `iv`, `key` parameter with `OTPManager`.
 
-## RoadMap
-
-- Securing insecure connection such as `HTTP`. Adjustment exception domains for project in the plist.
-- Securing user password
+### Password
+- Securing the whole process from user input to sending backend using a view named ###SecurePasswordView with `PasswordManager` given `password`, `iv`, `key`.
 
 ## Installation
 
@@ -42,4 +41,5 @@ TolgaTaner, dev.tolgataner@icloud.com
 
 ## License
 
-SecureKit is available under the MIT license. See the LICENSE file for more info.
+SecureKit is available under the GNU GENERAL PUBLIC licence. See the LICENSE file for more info.
+    

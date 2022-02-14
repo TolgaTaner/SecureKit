@@ -46,7 +46,7 @@ final class OtpManagerTests: XCTestCase {
         do {
             let key = "2tC2H19lkVbQDfakxcrtNMQdd0FloLyw"
             let iv = "bbC2H19lkVbQDfak"
-            sut = try OtpManager(code: "987654", iv: iv, key: key)
+            sut = try OtpManager(storedValue: "987654", iv: iv, key: key)
         }
         catch {
             XCTAssertThrowsError(DummyError.cantInitialization)

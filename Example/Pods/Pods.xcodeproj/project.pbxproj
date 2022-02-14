@@ -84,6 +84,10 @@
 		8696F36413C5022B80C90D7F6F095EE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8770643289690939CA81EC70C23737E3 /* Foundation.framework */; };
 		883E03D5F63E4A5F9AC708633424896B /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36253471F9A74B1AE62605CA72BBE3 /* SHA1.swift */; };
 		8B0847B6C4AE3201E4BD3F16467D3651 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5CFB018FAEF0A5B9B8707F296BE971 /* String+FoundationExtension.swift */; };
+		9500C18C27BA75FA00BD79EB /* SecurePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9500C18B27BA75FA00BD79EB /* SecurePasswordView.swift */; };
+		9500C19227BA788200BD79EB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9500C19127BA788200BD79EB /* UIView+Extension.swift */; };
+		9500C19427BAAE7B00BD79EB /* SecurePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9500C19327BAAE7B00BD79EB /* SecurePasswordView.xib */; };
+		95119BD127B9302A005AC0DA /* PasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95119BD027B9302A005AC0DA /* PasswordManager.swift */; };
 		958D884F07F2EF5A01763A4321F7706C /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ED4BB49B53369E5BED7E0DD063BBE4 /* StreamDecryptor.swift */; };
 		A24347122645BA45628664A7150167EC /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51936551EB5F65E2870C3B8BC4F703D7 /* GCM.swift */; };
 		A39CDB9564FF499A726A124D54F288F0 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9F0816ED82065CC9FB97450C5BA5B /* CipherModeWorker.swift */; };
@@ -228,6 +232,10 @@
 		91751C7E24E93F53ED99B903434578F2 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Sources/CryptoSwift/Int+Extension.swift"; sourceTree = "<group>"; };
 		922B98E3252B0AAFF45060D778614F34 /* Pods-SecureKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SecureKit_Example-dummy.m"; sourceTree = "<group>"; };
 		93F57F685C00C8505C73A3BC0703A003 /* Pods-SecureKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SecureKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		9500C18B27BA75FA00BD79EB /* SecurePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecurePasswordView.swift; path = SecureKit/Classes/SecurePasswordView.swift; sourceTree = "<group>"; };
+		9500C19127BA788200BD79EB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "SecureKit/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
+		9500C19327BAAE7B00BD79EB /* SecurePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SecurePasswordView.xib; path = SecureKit/Classes/SecurePasswordView.xib; sourceTree = "<group>"; };
+		95119BD027B9302A005AC0DA /* PasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordManager.swift; path = SecureKit/Classes/PasswordManager.swift; sourceTree = "<group>"; };
 		96FC08647EA357BD3B29D879AFD0ABC3 /* PBKDF1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF1.swift; path = Sources/CryptoSwift/PKCS/PBKDF1.swift; sourceTree = "<group>"; };
 		9708B31FC9BC29BCC70272B6911FBA74 /* Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptors.swift; path = Sources/CryptoSwift/Cryptors.swift; sourceTree = "<group>"; };
 		9A35803E3405638BA8F620BF5AD99322 /* Pods-SecureKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SecureKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -514,8 +522,12 @@
 			children = (
 				3A2DE01B0453EB271C4F548B9C38BB3C /* CryptionSettingsProtocols.swift */,
 				E4C03038D5937E294876C9481119D09D /* Data+Extension.swift */,
+				9500C19127BA788200BD79EB /* UIView+Extension.swift */,
 				C70F4D7F7F9986C9904C67B632A44045 /* KeychainProtocols.swift */,
+				9500C19327BAAE7B00BD79EB /* SecurePasswordView.xib */,
+				9500C18B27BA75FA00BD79EB /* SecurePasswordView.swift */,
 				2A7CF8184B03C6B4434739D0C7E0E1D6 /* OtpManager.swift */,
+				95119BD027B9302A005AC0DA /* PasswordManager.swift */,
 				D9D251B3508674870E2FCEAEF48FEAF1 /* SecureManager.swift */,
 				D02FFB08F06436EA628EC714A18A13E6 /* String+Extension.swift */,
 				8B3DE9C9AFD3CC2AC6936A1E2EEC336A /* Pod */,
@@ -811,6 +823,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9500C19427BAAE7B00BD79EB /* SecurePasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,6 +955,9 @@
 				4744E98EDFB71F4F4332C8DE2B26C38B /* OtpManager.swift in Sources */,
 				234E45023DF84E943EB406C75A2FBEFC /* SecureKit-dummy.m in Sources */,
 				D84D269E6A277A98B4BAF95FABAFD2C5 /* SecureManager.swift in Sources */,
+				9500C18C27BA75FA00BD79EB /* SecurePasswordView.swift in Sources */,
+				95119BD127B9302A005AC0DA /* PasswordManager.swift in Sources */,
+				9500C19227BA788200BD79EB /* UIView+Extension.swift in Sources */,
 				BCFEFDC8E1722A55EDB9D60EDD6A9987 /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

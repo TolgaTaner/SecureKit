@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SecureKit'
-  s.version          = '0.1.2'
+  s.version          = '1.0.0'
   s.summary          = 'A kit that secure the user sensitive data.'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'It secures the user sensitive data using AES encryption such as one time password code, password.'
+  s.description      = 'It secures the user sensitive data using AES encryption given iv, key and pkcs7 parameters. It prevents reverse engineering stuffs.'
 
   s.homepage         = 'https://github.com/TolgaTaner/SecureKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

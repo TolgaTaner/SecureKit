@@ -8,8 +8,8 @@
 import UIKit.UIView
 
 public final class SecurePasswordView: UIView {
-
-    @IBOutlet public weak var element: UITextField!
+    
+    @IBOutlet public weak var textfield: UITextField!
     
     public var manager: PasswordManager!
     public var password: String = String()
@@ -26,14 +26,14 @@ public final class SecurePasswordView: UIView {
     
     public func setup(iv: String, key: String) throws {
         do {
-            manager = try PasswordManager(storedValue: element.text ?? "",
-                                      iv: iv,
-                                      key: key)
+            manager = try PasswordManager(storedValue: textfield.text ?? "",
+                                          iv: iv,
+                                          key: key)
         }
         catch(let error) {
             fatalError(error.localizedDescription)
         }
-        element.delegate = self
+        textfield.delegate = self
     }
     
     fileprivate func encrypt(_ text: String) {
@@ -49,10 +49,22 @@ public final class SecurePasswordView: UIView {
 }
 
 //MARK: - UITextFieldDelegate
-extension SecurePasswordTextField: UITextFieldDelegate {
+extension SecurePasswordView: UITextFieldDelegate {
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        encrypt(textField.text ?? "")
+        if let text = textField.text,
+           let textRange = Range(range, in: text) {
+            let updatedText = text.replacingCharacters(in: textRange,
+                                                       with: string)
+            if updatedText.isEmpty {
+                password.removeAll()
+                manager.deleteFromKeychain()
+                manager.password.removeAll()
+                return true
+            }
+            encrypt(updatedText)
+            return true
+        }
         return true
     }
     
