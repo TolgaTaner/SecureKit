@@ -41,5 +41,5 @@ TolgaTaner, dev.tolgataner@icloud.com
 
 ## License
 
-SecureKit is available under the GNU GENERAL PUBLIC licence. See the LICENSE file for more info.
+SecureKit is available under the MIT licence. See the LICENSE file for more info.
     
