@@ -1,13 +1,17 @@
+//
+//  PasswordManagerTests.swift
+//  SecureKit_Tests
+//
+//  Created by Tolga Taner on 19.02.2022.
+//  Copyright © 2022 CocoaPods. All rights reserved.
+//
+
 import XCTest
 import SecureKit
 
-protocol InitializationTestCase: XCTestCase {
-    func testValuesSettingIsCorrect()
-}
+final class PasswordManagerTests: XCTestCase {
 
-final class OtpManagerTests: XCTestCase {
-    
-    private var sut: OtpManager!
+    private var sut: PasswordManager!
     
     private enum DummyError: Swift.Error {
         case cantInitialization
@@ -24,38 +28,31 @@ final class OtpManagerTests: XCTestCase {
     }
     
     func testCodeEncryptedSuccessfully() {
-        XCTAssertTrue(sut.code == "987654")
+        XCTAssertTrue(sut.password == "Tt1Ttl!")
         let result = try! sut.encrypt()
-        XCTAssertFalse(result == sut.code)
-    }
-    
-    func testCodeDecryptedSuccessfully() {
-        XCTAssertTrue(sut.code == "987654")
-        let encryptedResult = try! sut.encrypt()
-        XCTAssertFalse(encryptedResult == "987654")
-        let result = try! sut.decrypt()
-        XCTAssertTrue(result == "987654")
+        XCTAssertFalse(result == sut.password)
     }
     
     private func setup() {
         do {
             let key = "2tC2H19lkVbQDfakxcrtNMQdd0FloLyw"
             let iv = "bbC2H19lkVbQDfak"
-            sut = try OtpManager(storedValue: "987654", iv: iv, key: key)
+            sut = try PasswordManager(storedValue: "Tt1Ttl!", iv: iv, key: key)
         }
         catch {
             XCTAssertThrowsError(DummyError.cantInitialization)
         }
     }
+
 }
 
 //MARK: - InitializationTestCase
-extension OtpManagerTests: InitializationTestCase {
+extension PasswordManagerTests: InitializationTestCase {
     
     func testValuesSettingIsCorrect() {
         XCTAssertTrue(sut.key == "2tC2H19lkVbQDfakxcrtNMQdd0FloLyw")
         XCTAssertTrue(sut.iv == "bbC2H19lkVbQDfak")
-        XCTAssertTrue(sut.code == "987654")
+        XCTAssertTrue(sut.password == "Tt1Ttl!")
     }
     
 }

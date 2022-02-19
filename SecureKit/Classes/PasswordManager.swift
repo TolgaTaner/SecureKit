@@ -16,7 +16,7 @@ protocol Password {
 
 public final class PasswordManager: SecureManager {
     
-    var password: String
+    public var password: String
     
     enum Error: Swift.Error {
         case cantConvertToData
