@@ -7,9 +7,6 @@
 [![Platform](https://img.shields.io/cocoapods/p/SecureKit.svg?style=flat)](https://cocoapods.org/pods/SecureKit)
 
 SecureKit is a secure way any sensitive data using for iOS project.
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
@@ -35,7 +32,6 @@ it, simply add the following line to your Podfile:
 - Add your this statement to project's podfile ` pod  'SecureKit' `
 
 - In the existing terminal screen, run `pod install` in the project directory.
-
 
 ## Author
 
