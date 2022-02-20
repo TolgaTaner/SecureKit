@@ -1,6 +1,4 @@
-# SecureKit   ![icons8-secure-cloud-50](https://user-images.githubusercontent.com/21999825/154021006-9ca95d71-868f-46d9-8512-b6b5b22ae1be.png)
-
-
+# SecureKit
 
 [![Version](https://img.shields.io/cocoapods/v/SecureKit.svg?style=flat)](https://cocoapods.org/pods/SecureKit)
 [![License](https://img.shields.io/cocoapods/l/SecureKit.svg?style=flat)](https://cocoapods.org/pods/SecureKit)
